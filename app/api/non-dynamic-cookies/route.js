@@ -10,6 +10,13 @@ export async function GET(request) {
   // Get a specific cookie does NOT make app route dynamic
   const cookieA = request.cookies.get("a");
 
+  /**
+   * Uncommenting any of these request attribute WILL triggers dynamic mode
+   */
+  // request.url;
+  // request.headers;
+  // request.json();
+
   const message = "GET @ " + Date.now() + " cookies: " + cookiesDesc;
   console.log(message);
 
